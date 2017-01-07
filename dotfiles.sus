@@ -1,0 +1,52 @@
+card dotfiles {
+    spark card zsh
+    spark card xmonad
+    spark card xresources
+    spark card compton
+}
+
+card zsh {
+    into ~
+
+    .zshrc
+    .zprofile
+    .zshenv
+
+    spark card antigen
+}
+
+card antigen {
+    into ~/.zsh
+    outof antigen
+
+    antigen-hs
+    MyAntigen.hs
+}
+
+card xmonad {
+    into ~/.xmonad
+    outof xmonad
+
+    xmonad.hs
+
+    spark card xmobar
+}
+
+card xmobar {
+    into ~
+    outof xmonad
+
+    .xmobarrc
+}
+
+card xresources {
+    into ~
+
+    .Xresources
+}
+
+card compton {
+    into ~/.config
+
+    compton.conf
+}

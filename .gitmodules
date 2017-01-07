@@ -1,0 +1,3 @@
+[submodule "antigen/antigen-hs"]
+	path = antigen/antigen-hs
+	url = https://github.com/Tarrasch/antigen-hs.git
