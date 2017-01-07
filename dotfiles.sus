@@ -1,8 +1,22 @@
 card dotfiles {
+    spark card vim
     spark card zsh
     spark card xmonad
     spark card xresources
     spark card compton
+}
+
+card vim {
+    into ~/.config/nvim
+    outof vim
+
+    init.vim
+
+    {
+        into autoload
+
+        plug.vim
+    }
 }
 
 card zsh {
