@@ -47,6 +47,7 @@ Plug 'mbbill/undotree'
 
 " }}}
 
+Plug 'dean4devil/vim-hodgepodge'
 
 " Handy little utilities --- {{{
 
