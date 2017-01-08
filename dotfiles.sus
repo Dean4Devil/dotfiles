@@ -4,6 +4,7 @@ card dotfiles {
     spark card xmonad
     spark card xresources
     spark card compton
+    spark card gnupg
 }
 
 card vim {
@@ -63,4 +64,13 @@ card compton {
     into ~/.config
 
     compton.conf
+}
+
+card gnupg {
+    into ~/.gnupg
+    outof gnupg
+
+    dirmngr.conf
+    gpg-agent.conf
+    gpg.conf
 }
