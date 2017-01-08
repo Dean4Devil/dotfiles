@@ -51,7 +51,7 @@ keyBinds conf@XConfig {XMonad.modMask = globm} = M.fromList $
     [ ((globm,               xK_Return), spawn $ XMonad.terminal conf) -- %! Launch terminal
     , ((globm,               xK_r     ), spawn "rofi -modi \"run,drun,window,ssh\" -show run -fullscreen -location 0 -lines 19 -bw 0 -font \"MonacoB 16\" -padding 330 -separator-style none -opacity 80") -- %! Launch rofi
     , ((globm .|. shiftMask, xK_c     ), kill) -- %! Close the focused window
-    , ((globm,               xK_s     ), spawn "/usr/local/bin/lockscreen") -- %! Lock the screen
+    , ((globm,               xK_s     ), spawn "lockscreen") -- %! Lock the screen
 
     , ((locm,               xK_space ), sendMessage NextLayout) -- %! Rotate through the available layout algorithms
     , ((locm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
