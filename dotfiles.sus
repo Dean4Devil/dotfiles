@@ -10,6 +10,7 @@ card dotfiles {
     spark card redshift
     spark card xbindkeys
     spark card git
+    spark card ssh
 }
 
 card vim {
@@ -96,4 +97,11 @@ card git {
     into ~
 
     .gitconfig
+}
+
+card ssh {
+    outof ssh
+    into ~/.ssh
+
+    config
 }
