@@ -1,0 +1,11 @@
+[user]
+    name = Gregor Reitzenstein
+    email = dean4devil@paranoidlabs.org
+    signingkey = 0xE9B5049B2974C68A
+[push]
+    default = simple
+[alias]
+    last = log -1 HEAD
+    unstage = reset HEAD --
+[credential]
+    helper = cache --timeout=3600

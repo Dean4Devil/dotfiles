@@ -1,4 +1,4 @@
-Config { font = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-u"
+Config { font = "xft:Knack Nerd Font Regular:size=10"
        , bgColor = "#000000"
        , fgColor = "#C9A34E"
        , border = NoBorder
@@ -8,14 +8,16 @@ Config { font = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-u"
        , hideOnStart = False
        , persistent = True
        , allDesktops = True
-       , commands = [ Run Network "eno1" ["-L", "8", "-H", "32", "-l", "#C9A34E", "-n", "#429942" ,"-h", "#A36666", "-t", "<dev>: <rx> : <tx>"] 10
+       , commands = [ Run Network "wlp2s0" ["-L", "8", "-H", "32", "-l", "#C9A34E", "-n", "#429942" ,"-h", "#A36666", "-t", "   <rx> :  <tx>"] 10
+                    , Run Network "enp3s0f1" ["-L", "8", "-H", "32", "-l", "#C9A34E", "-n", "#429942" ,"-h", "#A36666", "-t", ":  <rx> :  <tx>"] 10
                     , Run Cpu ["-L","3","-H","50","--normal","#429942","--high","#A36666"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-    		    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run CoreTemp ["-t", "Temp: <core0>C : <core1>C : <core2>C : <core3>C"] 10
+                    , Run Memory ["-t","  <usedratio>%"] 10
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run CoreTemp ["-t", ": CPU: <core1>C/<core2>C : MB <core0>C"] 10
+                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "--", "-O", " ", "-o", "  <left>%"] 100
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ %coretemp% <fc=#429942>|</fc> %cpu% <fc=#429942>|</fc> %memory% <fc=#429942>|</fc> %eno1% <fc=#429942>|</fc> %date%"
+       , template = " %StdinReader% }{ %coretemp% <fc=#429942>|</fc> %cpu% <fc=#429942>|</fc> %memory% <fc=#429942>|</fc> %wlp2s0% %enp3s0f1% <fc=#429942>|</fc> %BAT0% <fc=#429942>|</fc> %date%"
        }

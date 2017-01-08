@@ -22,6 +22,7 @@ main = do
         { terminal        = "st"
         , startupHook     = startupHook desktopConfig
                           <+> comptonHook
+                          <+> redshiftHook
                           <+> wallpaperHook
                           <+> xbindkeysHook
                           <+> setWMName "LG3D"
@@ -35,8 +36,9 @@ main = do
         , focusedBorderColor = "#005577"
         , normalBorderColor = "#444444"
         }
-  where wallpaperHook  = spawn "/usr/bin/feh --bg-scale ~/Pictures/Wallpaper/A8rgHLL.jpg"
+  where wallpaperHook  = spawn "/usr/bin/feh --bg-scale ~/Pictures/Wallpaper/Crg6j14.jpg"
         comptonHook    = spawn "compton --config ~/.config/compton.conf"
+        redshiftHook   = spawn "redshift"
         xbindkeysHook  = spawn "xbindkeys"
         globalTermHook = namedScratchpadManageHook scratchpads
 
