@@ -14,7 +14,7 @@ Config { font = "xft:Knack Nerd Font Regular:size=10"
                     , Run Memory ["-t","  <usedratio>%"] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run CoreTemp ["-t", ": CPU: <core1>C/<core2>C : MB <core0>C"] 10
-                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "--", "-O", " ", "-o", "  <left>%"] 100
+                    , Run BatteryP ["BAT0"] ["-t", "Bat: <left>%", "--", "-O", " ", "-o", "  <left>%"] 100
                     , Run StdinReader
                     ]
        , sepChar = "%"

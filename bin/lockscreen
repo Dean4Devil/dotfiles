@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+ffmpeg -loglevel quiet -y -s "1920x1080" -f x11grab -i "${DISPLAY}" -vframes 1 -vf 'boxblur=luma_radius=15:luma_power=2' "/tmp/lockscreen.png"
+i3lock -i /tmp/lockscreen.png
+rm /tmp/lockscreen.png

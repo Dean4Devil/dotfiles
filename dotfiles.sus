@@ -1,16 +1,17 @@
 card dotfiles {
     into ~
 
-    spark card vim
-    spark card zsh
-    spark card xmonad
-    spark card xresources
+    spark card bin
     spark card compton
+    spark card git
     spark card gnupg
     spark card redshift
-    spark card xbindkeys
-    spark card git
     spark card ssh
+    spark card vim
+    spark card xbindkeys
+    spark card xmonad
+    spark card xresources
+    spark card zsh
 }
 
 card vim {
@@ -104,4 +105,11 @@ card ssh {
     into ~/.ssh
 
     config
+}
+
+card bin {
+    outof bin
+    into ~/.local/bin
+
+    lockscreen
 }
