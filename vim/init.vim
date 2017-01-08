@@ -470,7 +470,6 @@ let g:startify_bookmarks = [{'r': '~/.config/nvim/init.vim'}]
 let g:startify_commands = [
             \ {'u': ['Update Plugins', 'PlugUpdate']},
             \ ]
-source ~/.local/share/nvim/site/plugin/kitty.vim
 let g:startify_custom_header = kitty#kittysay()
 " }}}
 
