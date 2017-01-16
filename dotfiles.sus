@@ -12,6 +12,7 @@ card dotfiles {
     spark card xmonad
     spark card xresources
     spark card zsh
+    spark card ctags
 }
 
 card vim {
@@ -112,4 +113,9 @@ card bin {
     into ~/.local/bin
 
     lockscreen
+}
+
+card ctags {
+    into ~
+    .ctags
 }
